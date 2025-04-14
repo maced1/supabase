@@ -1,4 +1,4 @@
-name: Testing older releases
+name: Eco-CI v1.24.04
 run-name: On push old release
 on:
   push:
