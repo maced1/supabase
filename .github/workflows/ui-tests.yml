@@ -5,6 +5,8 @@ on:
     branches: [master]
     paths:
       - 'packages/ui/**'
+  push:
+    branches: feature/eco-ci-v1.24.04
 
 # Cancel old builds on new commit for same workflow + branch/PR
 concurrency:
