@@ -1,5 +1,5 @@
-name: Daily Tests with Energy Measurement
-run-name: Scheduled - DEV Branch
+name: Testing older releases
+run-name: On push old release
 on:
   push:
     branches:
