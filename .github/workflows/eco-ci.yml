@@ -3,7 +3,7 @@ run-name: On push old release
 on:
   push:
     branches:
-      - feature/set-eco-ci-v1.24.04
+      - feature/eco-ci-v1.24.04
 
 permissions:
   read-all
@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: supabase/supabase
-          ref: feature/set-eco-ci-v1.24.04
+          ref: feature/eco-ci-v1.24.04
           sparse-checkout: |
             packages
             
