@@ -36,6 +36,12 @@ jobs:
       - name: Install build dependencies
         run: sudo apt-get update && sudo apt-get install -y build-essential python3 g++ make
 
+      - name: Fix libpg-query
+        run: sudo dnf install make automake gcc gcc-c++ kernel-devel
+
+      - name: Run make
+        run: make
+
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
