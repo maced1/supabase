@@ -49,7 +49,7 @@ jobs:
           cache: 'npm'
         
       - name: Install deps
-        run: npm install --omit=optional
+        run: npm ci --no-optional
 
       - name: Setup Python Measurment
         uses: green-coding-solutions/eco-ci-energy-estimation@v4 # use hash or @vX here (See note below)
