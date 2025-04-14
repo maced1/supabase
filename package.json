@@ -52,6 +52,6 @@
     "node": "20.11.1"
   },
   "optionalDependencies": {
-    "@gregnr/libpg-query": "^1.0.0"
+    "libpg-query": ">=13.3.1"
   }
 }
