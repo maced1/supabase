@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: supabase/supabase
-          ref: 0.21.05 # Replace with desired tag or commit SHA
+          ref: v1.24.04 # Replace with desired tag or commit SHA
 
       - name: Checkout Repo Measurement
         uses: green-coding-solutions/eco-ci-energy-estimation@v4 # use hash or @vX here (See note below)
