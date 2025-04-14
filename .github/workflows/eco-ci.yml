@@ -22,7 +22,6 @@ jobs:
       - name: 'Checkout repository'
         uses: actions/checkout@v4
         with:
-          repository: supabase/supabase
           ref: feature/eco-ci-v1.24.04
           sparse-checkout: |
             packages
