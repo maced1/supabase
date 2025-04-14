@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: supabase/supabase
-          ref: v1.21.01 # Replace with desired tag or commit SHA
+          ref: v1.25.01 # Replace with desired tag or commit SHA
           sparse-checkout: |
             packages
             
