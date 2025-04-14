@@ -24,6 +24,8 @@ jobs:
         with:
           repository: supabase/supabase
           ref: v1.24.04 # Replace with desired tag or commit SHA
+          sparse-checkout: |
+            packages
 
       - name: Checkout Repo Measurement
         uses: green-coding-solutions/eco-ci-energy-estimation@v4 # use hash or @vX here (See note below)
@@ -32,12 +34,15 @@ jobs:
           label: 'repo checkout'
         # continue-on-error: true # recommended setting for production. See notes below.
 
+      - name: Install build dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential python3 g++ make
+
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
-
+        
       - name: Install deps
         run: npm ci
 
