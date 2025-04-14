@@ -32,19 +32,14 @@ jobs:
           label: 'repo checkout'
         # continue-on-error: true # recommended setting for production. See notes below.
 
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          run_install: false
-
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-          cache: 'pnpm'
+          cache: 'npm'
 
       - name: Install deps
-        run: pnpm i
+        run: npm ci
 
       - name: Setup Python Measurment
         uses: green-coding-solutions/eco-ci-energy-estimation@v4 # use hash or @vX here (See note below)
@@ -54,7 +49,7 @@ jobs:
         continue-on-error: true # recommended setting for production. See notes below.
 
       - name: Run tests
-        run: pnpm run test:ui
+        run: npm run test:ui
 
       - name: Tests measurement
         uses: green-coding-solutions/eco-ci-energy-estimation@v4 # use hash or @vX here (See note below)
